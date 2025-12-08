@@ -1,0 +1,277 @@
+  /* Reset basics */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #ffffff;
+    color: #111827;
+  }
+
+
+  .nav {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .nav-inner {
+    max-width: 1100px;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;    /* space between logo + links */
+  }
+  
+  /* Brand text stays first */
+  .nav-logo {
+    font-family: "Caveat", cursive;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #111827;
+  }
+  
+  /* Align menu links left */
+  .nav-links {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  /* Styling links */
+  .nav-links a {
+    text-decoration: none;
+    color: #111827;
+    font-size: 1rem;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.2rem;
+    width: 0;
+    height: 2px;
+    background: #111827;
+    transition: width 0.2s ease;
+  }
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* Hamburger button – mobile only */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #111827;
+  }
+  
+  
+  .header {
+    /* full-width hero band */
+    width: 100%;
+    min-height: 50vh;                 /* makes it feel like a proper hero */
+    display: flex;
+    align-items: center;              /* vertical center */
+    justify-content: center;          /* horizontal center */
+    background: #e1e1e1;
+  }
+  
+  /* Inner content container */
+  .about {
+    max-width: 900px;
+    width: 100%;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+  }
+  
+  /* Logo text: “Stem Tutors” */
+  .logo-title {
+    font-family: "Caveat", cursive;
+    font-size: clamp(4rem, 6vw, 6rem);  /* 64px → 96px depending on screen */
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 0.35em;
+  }
+  
+  /* The “o” replacement span */
+  .electron-o {
+    display: inline-block;
+    position: relative;
+    width: 0.60em;
+    height: 0.60em;
+    vertical-align: middle;
+    transform: translateY(0.02em); /* move cloud down a bit */
+    transform: translateX(0.07em);
+  }
+  
+  /* Subtitle */
+  .about > p {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);  /* ~19px → ~26px */
+    letter-spacing: 0.3px; /* slight refinement */
+    color: #1f2937;
+  }
+  
+  /* Optional: CTA buttons under the subtitle */
+  .actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.8rem;
+    border-radius: 999px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+  }
+  
+  .btn-primary {
+    background: #111827;
+    color: #ffffff;
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    color: #111827;
+    border: 1px solid #111827;
+  }
+  
+  .btn-secondary:hover {
+    background: rgba(17, 24, 39, 0.05);
+  }
+  
+  /* Canvas inside the “o” */
+  #electronCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;          /* fills the .electron-o span */
+    height: 100%;
+    pointer-events: none;
+  }
+
+
+
+  main {
+    padding: 4rem 0 5rem;
+    background: #ffffff;
+  }
+  
+  /* Card style for each section */
+  main section {
+    width: min(90%, 900px);   /* scales with screen, stops at 900px */
+    margin: 2rem auto;
+    padding: clamp(1.25rem, 3vw, 2.25rem); /* smart responsive padding */
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04),
+                0 4px 12px rgba(0, 0, 0, 0.03);
+    border-left: 4px solid #020617;
+    line-height: 1.8;
+    
+    /* mobile-first: stacked layout */
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  main section h2 {
+    font-size: 1.8rem;
+    color: #020617;
+    margin: 0;   /* flex handles spacing */
+  }
+  
+  main section p {
+    font-size: 1rem;
+    color: #111827;
+  }
+  
+  main section p + p {
+    margin-top: 0.5rem;
+  }
+  /* Optional light background sections */
+  #resources,
+  #careers {
+    background: #f9fafb;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 0.75rem;
+  }
+  
+  /* ─── FOOTER ────────────────────────────────────────── */
+  
+  .site-footer {
+    background: #111827;
+    color: #f9fafb;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 4rem;
+  }
+  
+  .site-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+    /* ─── MOBILE VIEW ───────────────────────── */
+    @media (max-width: 768px) {
+        .nav-inner {
+          padding: 0.75rem 1rem;
+          justify-content: space-between; /* logo left, burger right */
+        }
+      
+        .nav-toggle {
+          display: flex;
+        }
+      
+        .nav-links {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: #ffffff;
+          border-bottom: 1px solid #e5e7eb;
+          flex-direction: column;
+          gap: 0;
+          padding: 0.5rem 1rem 0.75rem;
+          display: none;
+        }
+      
+        .nav-links li {
+          padding: 0.4rem 0;
+        }
+      
+        .nav-links.nav-links--open {
+          display: flex;
+        }
+        
+      }
