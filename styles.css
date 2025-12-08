@@ -282,6 +282,10 @@
       .about {
         padding-top: 4rem;
         padding-bottom: 2rem;
-    }
+      }
+
+      .desc {
+        font-size: 1.8rem;
+      }
         
       }
