@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact | STEM Tutors</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body class="contact-page">
+
+<header class="site-header">
+    <nav class="nav">
+        <div class="nav-inner">
+
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <section class="contact-hero">
+        <h1>Contact Us</h1>
+        <p>Interested in tutoring? We’ll reach out shortly.</p>
+    </section>
+</header>
+
+<main>
+
+    <form name="contact" method="POST" data-netlify="true" action="/thank-you.html" class="contact-form">
+        <input type="hidden" name="form-name" value="contact">
+
+        <div class="form-grid">
+
+            <div class="form-field">
+                <label for="student-name">Student Name *</label>
+                <input type="text" id="student-name" name="student-name" placeholder="John Doe" required>
+            </div>
+
+            <div class="form-field">
+                <label for="grade">Grade *</label>
+                <select id="grade" name="grade" required>
+                    <option value="">Select grade</option>
+                    <option>Grade 9</option>
+                    <option>Grade 10</option>
+                    <option>Grade 11</option>
+                    <option>Grade 12</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="subject">Subject of Interest *</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Select subject</option>
+                    <option>Math</option>
+                    <option>Physics</option>
+                    <option>Math & Physics</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="parent-email">Parent Email *</label>
+                <input type="email" id="parent-email" name="parent-email" placeholder="parent@email.com" required>
+            </div>
+
+            <div class="form-field full-width">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required>
+            </div>
+
+            <div class="form-field full-width">
+                <label for="notes">Additional Notes (optional)</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Tell us useful info — schedule, goals, availability, etc."></textarea>
+            </div>
+
+        </div>
+
+        <button type="submit" class="btn submit-btn">Submit Inquiry</button>
+
+    </form>
+
+</main>
+
+<footer class="site-footer">
+    <p>&copy; <span id="year"></span> STEM Tutors. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+

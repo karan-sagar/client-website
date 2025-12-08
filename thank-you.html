@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Thank You | STEM Tutors</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/thankyou.css">
+</head>
+
+<body class="thankyou-page">
+
+<header class="site-header">
+    <nav class="nav">
+        <div class="nav-inner">
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main class="thankyou-wrapper">
+
+    <div class="thankyou-box">
+        <h1>Thank You!</h1>
+        <p>Your message has been received.</p>
+        <p>We'll reach out shortly — typically within 24 hours.</p>
+
+        <a href="index.html" class="btn return-btn">Return Home</a>
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <p>&copy; <span id="year"></span> STEM Tutors. All rights reserved.</p>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
