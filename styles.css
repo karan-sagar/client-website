@@ -108,7 +108,7 @@
   /* Logo text: “Stem Tutors” */
   .logo-title {
     font-family: "Caveat", cursive;
-    font-size: clamp(4rem, 6vw, 6rem);  /* 64px → 96px depending on screen */
+    font-size: clamp(80px, 15vw, 11.25rem);  
     font-weight: 400;
     line-height: 1.1;
     margin-bottom: 0.35em;
@@ -243,7 +243,7 @@
   }
 
     /* ─── MOBILE VIEW ───────────────────────── */
-    @media (max-width: 480px) {
+    @media (max-width: 800px) {
 
         .nav-inner {
           padding: 0.75rem 1rem;
@@ -276,7 +276,7 @@
         }
 
         .logo-title {
-          font-size: clamp(3.5rem, 10vw, 5rem);  /* Bigger base + more aggressive scaling */
+          font-size: Clamp(60px, 18vw, 100px) ;  /* Bigger base + more aggressive scaling */
       }
 
       .about {
