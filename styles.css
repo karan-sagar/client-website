@@ -191,7 +191,7 @@ main {
 
 /* Subtitle */
 .about > p {
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-size: clamp(1.0rem, 2vw, 1.6rem);
   letter-spacing: 0.3px;
   color: #1f2937;
 }
