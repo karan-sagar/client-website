@@ -34,62 +34,37 @@
     </section>
 </header>
 
-<main>
-
-    <form name="contact" method="POST" data-netlify="true" action="thank-you.html" class="contact-form">
-    <input type="hidden" name="form-name" value="contact">
-
-        <div class="form-grid">
-
-            <div class="form-field">
-                <label for="student-name">Student Name *</label>
-                <input type="text" id="student-name" name="student-name" placeholder="John Doe" required>
-            </div>
-
-            <div class="form-field">
-                <label for="grade">Grade *</label>
-                <select id="grade" name="grade" required>
-                    <option value="">Select grade</option>
-                    <option>Grade 9</option>
-                    <option>Grade 10</option>
-                    <option>Grade 11</option>
-                    <option>Grade 12</option>
-                </select>
-            </div>
-
-            <div class="form-field">
-                <label for="subject">Subject of Interest *</label>
-                <select id="subject" name="subject" required>
-                    <option value="">Select subject</option>
-                    <option>Math</option>
-                    <option>Physics</option>
-                    <option>Math & Physics</option>
-                </select>
-            </div>
-
-            <div class="form-field">
-                <label for="parent-email">Parent Email *</label>
-                <input type="email" id="parent-email" name="parent-email" placeholder="parent@email.com" required>
-            </div>
-
-            <div class="form-field full-width">
-                <label for="phone">Phone Number *</label>
-                <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required>
-            </div>
-
-            <div class="form-field full-width">
-                <label for="notes">Additional Notes (optional)</label>
-                <textarea id="notes" name="notes" rows="4" placeholder="Tell us useful info — schedule, goals, availability, etc."></textarea>
-            </div>
-
-        </div>
-
-        <button type="submit" class="btn submit-btn">Submit Inquiry</button>
-
+<section id="contact">
+    <h2>Contact</h2>
+  
+    <form name="contact" method="POST" data-netlify="true">
+      <!-- IMPORTANT: hidden form-name must match `name` -->
+      <input type="hidden" name="form-name" value="contact">
+  
+      <p>
+        <label>Name<br>
+          <input type="text" name="name" required>
+        </label>
+      </p>
+  
+      <p>
+        <label>Email<br>
+          <input type="email" name="email" required>
+        </label>
+      </p>
+  
+      <p>
+        <label>Message<br>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+      </p>
+  
+      <p>
+        <button type="submit">Send</button>
+      </p>
     </form>
-
-</main>
-
+  </section>
+  
 <footer class="site-footer">
     <p>&copy; <span id="year"></span> STEM Tutors. All rights reserved.</p>
 </footer>
