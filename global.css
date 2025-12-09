@@ -98,6 +98,19 @@ main {
     background: #111827;
   }
 
+  .site-footer {
+    background: #111827;
+    color: #f9fafb;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 4rem;
+  }
+  
+  .site-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
 
 
     /* ─── MOBILE VIEW ───────────────────────── */
