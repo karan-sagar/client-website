@@ -5,21 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>STEM Tutors</title>
 
+  <link rel="stylesheet" href="global.css">
   <link rel="stylesheet" href="styles.css">
-  
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
-
-<!-- iPhone / iPad icon -->
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
 </head>
 <body>
-
-
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <div class="nav-inner">
@@ -32,9 +22,8 @@
 
         <!-- Primary nav links -->
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="resources.html">Resources</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -44,15 +33,12 @@
         <h1 class="logo-title">
           Stem Tut<span class="electron-o"><canvas id="electronCanvas"></canvas></span>rs
         </h1>
-        <p class = "desc"> Math and Physics Classes for Grades 9 – 12.</p>
+        <p class="desc">Math and Physics Classes for Grades 9 – 12.</p>
       </div>
     </section>
-
   </header>
 
-
   <main>
-
     <section id="prospective-students" aria-labelledby="prospective-heading">
       <h2 id="prospective-heading">Prospective Students</h2>
       <p>
@@ -71,25 +57,63 @@
       <p>
         Physics is our attempt to understand how the world works, and like all science, our current theories
         are models that have not yet been proven wrong. Along the way, we encourage students to ask meaningful
-        questions that push the boundaries of their knowledge. 
+        questions that push the boundaries of their knowledge.
       </p>
     </section>
 
-    <!-- <section id="resources" aria-labelledby="resources-heading">
-      <h2 id="resources-heading">Resources</h2>
-      <p>
-        Coming soon: practice problems, formula sheets, and exam-style questions for Grades 9–12.
-      </p>
+    <!-- NEW: Contact section on same page -->
+    <section id="contact" class="contact-container">
+      <h1>Contact Us</h1>
+
+      <form name="contact" method="POST" data-netlify="true"
+            netlify-honeypot="bot-field" action="/thank-you.html">
+        <!-- Netlify form-name -->
+        <input type="hidden" name="form-name" value="contact">
+
+        <!-- Honeypot -->
+        <p style="display:none;">
+          <label>Don’t fill this out:
+            <input name="bot-field">
+          </label>
+        </p>
+
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" required>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required>
+          </div>
+
+          <div class="form-field">
+            <label for="grade">Grade</label>
+            <select id="grade" name="grade" required>
+              <option value="">Select Grade</option>
+              <option value="Grade 9">Grade 9</option>
+              <option value="Grade 10">Grade 10</option>
+              <option value="Grade 11">Grade 11</option>
+              <option value="Grade 12">Grade 12</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" type="tel" name="phone">
+          </div>
+
+          <div class="form-field form-full">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
     </section>
-
-    <section id="careers" aria-labelledby="careers-heading">
-      <h2 id="careers-heading">Careers</h2>
-      <p>
-        If you're interested in working with us, please email your resume to
-        <a href="mailto:stemtutorsca@gmail.com">stemtutorsca@gmail.com</a>.
-      </p>
-    </section> -->
-
   </main>
 
   <footer class="site-footer">
@@ -99,4 +123,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
